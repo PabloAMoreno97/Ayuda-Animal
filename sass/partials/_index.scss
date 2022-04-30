@@ -5,3 +5,27 @@
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
 }
+
+.hero{
+    background: url('https://i.picsum.photos/id/55/4608/3072.jpg?hmac=ahGhylwdN52ULB37deeMZX6T_G7NiERtoPhwydMvUKQ') no-repeat center / cover;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    &--textContainer{
+        padding-left: 3%;
+        background-color: rgba(0,0,0,0.4);
+        &__h1{
+            color: #FFF;
+            font-family: 'Ms Madi', cursive;
+            font-size: 5rem;
+        }
+        &__h2{
+            color: #FFF;
+            font-weight: 300;
+        }
+    }
+}
+

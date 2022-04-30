@@ -1,6 +1,6 @@
 .header {
     padding: 0.5rem;
-    height: 3.5rem;
+    height: 10vh;
     background-color: #000;
     color: #FFF;
     display: flex;
@@ -30,33 +30,35 @@
     }
     &--form{
         display: flex;
-        align-items: center;
         width: 30%;
     }
     &--searchBar{
-        height: 1.5rem;
+        height: 1.8rem;
         width: 80%;
         border-radius: 1.2rem;
-        padding-left: 0.5rem;
+        padding-left: 0.8rem;
         font-size: 1.1rem;
     }
     &--searchButton{
         height: 1.9rem;
         width: 20%;;
         border-radius: 1rem;
-        border: solid 0.1rem #FFF;
+        border: solid 0.15rem #FFF;
         background-color: #000;
         color: #FFF;
         font-weight: 600;
         font-size: 1.1rem;
         margin-left: 1rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-bottom: 0.5%;
     }
     &--title{
         margin: 0;
         font-size: 2rem;
         width: 20%;
         text-align: left;
+        a {
+            font-family: 'Ms Madi', cursive;
+            font-size: 3rem;
+        }
     }
 }
