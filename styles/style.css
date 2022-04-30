@@ -1,29 +1,35 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
 }
 
 .header {
   padding: 0.5rem;
+  height: 3.5rem;
   background-color: #000;
   color: #FFF;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  text-align: center;
 }
 .header a {
   color: #FFF;
+  text-decoration: none;
 }
 .header nav {
   width: 40%;
-  justify-items: flex-end;
+  display: flex;
 }
 .header nav ul {
   display: flex;
+  margin: 0;
   width: 100%;
   justify-content: right;
+  text-align: center;
 }
 .header nav ul li {
   margin-right: 1.5rem;
@@ -33,21 +39,23 @@
 }
 .header--form {
   display: flex;
-  align-content: center;
+  align-items: center;
   width: 30%;
 }
 .header--searchBar {
   height: 1.5rem;
-  width: 70%;
+  width: 80%;
   border-radius: 1.2rem;
   padding-left: 0.5rem;
   font-size: 1.1rem;
 }
 .header--searchButton {
   height: 1.9rem;
-  width: 30%;
+  width: 20%;
   border-radius: 1rem;
-  background-color: #FFF;
+  border: solid 0.1rem #FFF;
+  background-color: #000;
+  color: #FFF;
   font-weight: 600;
   font-size: 1.1rem;
   margin-left: 1rem;
@@ -55,8 +63,10 @@
   padding-right: 1rem;
 }
 .header--title {
+  margin: 0;
   font-size: 2rem;
   width: 20%;
+  text-align: left;
 }
 
 /*# sourceMappingURL=style.css.map */
