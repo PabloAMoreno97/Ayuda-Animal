@@ -1,0 +1,53 @@
+.header {
+    padding: 0.5rem;
+    background-color: #000;
+    color: #FFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    a{
+        color: #FFF
+    }
+    nav{
+        width: 40%;
+        justify-items: flex-end;
+        ul{
+            display: flex;
+            width: 100%;
+            justify-content: right;
+            li{
+                margin-right: 1.5rem;
+                list-style: none;
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+        }
+    }
+    &--form{
+        display: flex;
+        align-content: center;
+        width: 30%;
+    }
+    &--searchBar{
+        height: 1.5rem;
+        width: 70%;
+        border-radius: 1.2rem;
+        padding-left: 0.5rem;
+        font-size: 1.1rem;
+    }
+    &--searchButton{
+        height: 1.9rem;
+        width: 30%;;
+        border-radius: 1rem;
+        background-color: #FFF;
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-left: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    &--title{
+        font-size: 2rem;
+        width: 20%;
+    }
+}

@@ -2,6 +2,61 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  padding: 0.5rem;
+  background-color: #000;
+  color: #FFF;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header a {
+  color: #FFF;
+}
+.header nav {
+  width: 40%;
+  justify-items: flex-end;
+}
+.header nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: right;
+}
+.header nav ul li {
+  margin-right: 1.5rem;
+  list-style: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.header--form {
+  display: flex;
+  align-content: center;
+  width: 30%;
+}
+.header--searchBar {
+  height: 1.5rem;
+  width: 70%;
+  border-radius: 1.2rem;
+  padding-left: 0.5rem;
+  font-size: 1.1rem;
+}
+.header--searchButton {
+  height: 1.9rem;
+  width: 30%;
+  border-radius: 1rem;
+  background-color: #FFF;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-left: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.header--title {
+  font-size: 2rem;
+  width: 20%;
 }
 
 /*# sourceMappingURL=style.css.map */
