@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AyudAnimal</title>
+    <title>CulturAnimal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -13,28 +13,160 @@
 </head>
 <body>
   <header class="header">
-    <h2 class="header--title"><a href="#">AyudAnimal</a></h2>
+    <h2 class="header--title"><a href="#">CulturAnimal</a></h2>
     <form class="header--form">
       <input type="text" name="searchBar" id="searchBar" class="header--searchBar">
       <input type="button" value="Buscar" class="header--searchButton">
     </form>
-    <nav>
+    <nav class="nav">
       <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="./pages/services.html">Servicios</a></li>
-        <li><a href="./pages/games.html">Tools</a></li>
-        <li><a href="./pages/team.html">Equipo</a></li>
-        <li><a href="./pages/contact.html">Contacto</a></li>
+        <li><a href="#"><i class="fas fa-home nav--icon" aria-hidden="true"></i>Inicio</a></li>
+        <li><a href="./pages/services.html"><i class="fas fa-heart nav--icon" aria-hidden="true"></i>Servicios</a></li>
+        <li><a href="./pages/games.html"><i class="fas fa-solid fa-wrench nav--icon"></i>Tools</a></li>
+        <li><a href="./pages/team.html"><i class="fas fa-users nav--icon" aria-hidden="true"></i>Equipo</a></li>
+        <li><a href="./pages/contact.html"><i class="far fa-address-card nav--icon" aria-hidden="true"></i>Contacto</a></li>
       </ul>
     </nav>
   </header>
   <section class="hero">
     <div class="hero--textContainer">
-      <h1 class="hero--textContainer__h1">AyudAnimal</h1>
+      <h1 class="hero--textContainer__h1">CulturAnimal</h1>
       <h2 class="hero--textContainer__h2">Juntos por el bienestar y la ayuda animal</h2>
     </div>
   </section>
-  <main>
+  <main class="index--main">
+    <section class="news">
+      <div>
+        <h2>Noticias y curiosidades</h2>
+        <article class="firstNews__article">
+          <a href="https://www.purina-latam.com/mx/purina/nota/gatos/13-datos-curiosos-sobre-los-gatos#:~:text=Ya%20que%20tienes%20una%20breve%20presentaci%C3%B3n%20de%20los,Los%20gatos%20pueden%20pasar%20hasta%2014%20horas%20dormidos.">
+            <h4 class="firstNews__h4">Curiosidades sobre los gatos</h4>
+            <div class="firstNewsImg__div">
+              <img src="https://www.purina-latam.com/sites/g/files/auxxlc391/files/styles/kraken_generic_max_width_960/public/purina-10-datos-curiosos-sobre-los-gatos.png?itok=M2MiS7Mw" alt="Gato gris abrigado mirando de frente" class="firstNews__img">
+            </div>
+            <div class="firstNews__p">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex doloremque eos a, temporibus delectus rerum placeat mollitia sint aliquam totam, eveniet modi eum excepturi aliquid voluptatum reprehenderit ducimus! Quam, cum.</p>
+            </div>
+          </a>
+        </article>
+        <article class="secondNews__article">
+          <h4 class="secondNews__h4">¿Por qué adoptar un perro?</h4>
+          <iframe src="https://www.youtube.com/embed/wWw0iQF5Za8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        </article>
+        <article class="thirdNews__article">
+          <a href="https://cnnespanol.cnn.com/2021/11/06/dormir-mascota-saludable-expertos-trax/">
+            <h4 class="thirdNews__h4">¿Duermes con tu mascota?</h4>
+            <div class="thirdNewsImg__div">
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2021/11/dormir-con-tu-mascota.jpeg?resize=1024,576" alt="" class="thirdNews__img">
+            </div>
+            <div class="thirdNews__p">
+              <p>En la búsqueda de un mejor sueño, las personas a menudo preguntan si deberían compartir su cama con unamascota. Antes de llegar a eso, tomemos un momento para reflexionar sobre el otro lado...</p>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+    <section class="newPets">
+      <div class="newPets__div">
+        <div class="newPetsTitle__div">
+          <h2>¡Nuevos integrantes!</h2>
+        </div>
+        <div class="firstNewPet__div">
+          <a href="#">
+            <div class="firstNewPetImg__div"><img src="./media/tomy.jpg" alt="" class="firstNewPet__img"></div>
+            <p>Tomy, 5 meses</p>
+          </a>
+        </div>
+        <div class="secondNewPet__div">
+          <a href="#">
+            <div class="secondNewPetImg__div"><img src="./media/rocky.jpg" alt="" class="secondNewPet__img"></div>
+            <p>Rocky, 2 años</p>
+          </a>
+        </div>
+        <div class="thirdNewPet__div">
+          <a href="#">
+            <div class="thirdNewPetImg__div"><img src="./media/lucy.jpg" alt="" class="thirdNewPet__img"></div>
+            <p>Lucy, 5 años</p>
+          </a>
+        </div>
+        <div class="fourthNewPet__div">
+          <a href="#">
+            <div class="fourthNewPetImg__div"><img src="./media/toby.jpg" alt="" class="fourthNewPet__img"></div>
+            <p>Toby, 1 año</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="forms">
+      <div class="fastSearch__div">
+        <form class="fastSearch__form">
+          <fieldset>
+            <legend>Búsqueda rápida</legend>
+            <div class="petType__div">
+              <select name="dataPetType" id="petType" class="petType__select">
+                <option value="type" selected="" disabled="">Tipo</option>
+                <option value="all">Todos</option>
+                <option value="cat">Gato</option>
+                <option value="dog">Perro</option>
+                <option value="other">Otro</option>
+              </select>
+            </div>
+            <div class="petSize__div">
+              <select name="dataPetSize" id="petSize" class="petSize__select">
+                <option value="size" selected="" disabled="">Tamaño</option>
+                <option value="all">Todos</option>
+                <option value="small">Pequeño</option>
+                <option value="medium">Mediano</option>
+                <option value="large">Grande</option>
+              </select>
+            </div>
+            <div class="petAge__div">
+              <select name="dataPetAge" id="petAge" class="petAge__select">
+                <option value="age" selected="" disabled="">Edad</option>
+                <option value="any">Cualquiera</option>
+                <option value="1">Menor a 1 año</option>
+                <option value="4">Entre 1 y 4 años</option>
+                <option value="8">Entre 4 y 8 años</option>
+                <option value="other">Mayor a 8 años</option>
+              </select>
+            </div>
+            <input type="submit" value="Buscar" class="fastSearchButton__input">
+          </fieldset>
+        </form>
+      </div>
+      <div class="adoptionForm__div">
+        <form class="adoptionForm__form">
+          <fieldset>
+            <legend>Formulario de adopción</legend>
+            <div class="terms__div">
+              <label for="dataCheckbox">He leído los términos</label>
+              <input type="checkbox" name="dataCheckbox" id="adoptionTerms" class="termsCheckbox__input" required="">
+            </div>
+            <input type="submit" value="Descargar" class="adoptionFormDownload__input">
+          </fieldset>
+        </form>
+      </div>
+    </section>
   </main>
+  <footer class="footer">
+    <div class="footer--social">
+      <p>Siguenos en</p>
+      <a href="#"><i class="fab fa-facebook-square footer--icon" aria-hidden="true"></i></a>
+      <a href="#"><i class="fab fa-instagram footer--icon" aria-hidden="true"></i></a>
+      <a href="#"><i class="fab fa-twitter footer--icon" aria-hidden="true"></i></a>
+      <a href="#"><i class="fab fa-youtube footer--icon" aria-hidden="true"></i></a>
+    </div>
+    <div class="footer--info">
+      <h2 class="footer--info__h2">CulturAnimal</h2>
+      <p>Todos los derechos reservados - 2022, Colombia</p>
+      <p>Página elaborada por Pablo Andrés Moreno alvarez</p>
+    </div>
+    <div class="footer--contact">
+      <p>Contáctanos</p>
+      <a href="#"><i class="far fa-envelope footer--icon" aria-hidden="true"></i></a>
+      <a href="#"><i class="fab fa-whatsapp footer--icon" aria-hidden="true"></i></a>
+    </div>
+  </footer>
+  <script src="https://kit.fontawesome.com/42f502ebab.js" crossorigin="anonymous"></script>
 </body>
 </html>

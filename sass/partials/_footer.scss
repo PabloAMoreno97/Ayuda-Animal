@@ -1,0 +1,31 @@
+.footer{
+    background-color: #000;
+    color: #FFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+    &--social{
+        text-align: center;
+    }
+    &--info{
+        margin: 0;
+        font-size: 1.5rem;
+        width: 40%;
+        text-align: center;
+        &__h2 {
+            font-family: 'Ms Madi', cursive;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        p{
+            font-size: 1rem;
+        }
+    }
+    &--contact{
+        text-align: center;
+    }
+}
+.footer--icon{
+    color:#FFF;
+}

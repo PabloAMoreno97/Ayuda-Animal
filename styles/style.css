@@ -7,7 +7,7 @@
 }
 
 .hero {
-  background: url("https://i.picsum.photos/id/55/4608/3072.jpg?hmac=ahGhylwdN52ULB37deeMZX6T_G7NiERtoPhwydMvUKQ") no-repeat center/cover;
+  background: url("https://i.picsum.photos/id/1012/3973/2639.jpg?hmac=s2eybz51lnKy2ZHkE2wsgc6S81fVD1W2NKYOSh8bzDc") no-repeat center/cover;
   width: 100%;
   height: 90vh;
   display: flex;
@@ -17,21 +17,30 @@
 }
 .hero--textContainer {
   padding-left: 3%;
+  padding-bottom: 1rem;
   background-color: rgba(0, 0, 0, 0.4);
 }
 .hero--textContainer__h1 {
   color: #FFF;
   font-family: "Ms Madi", cursive;
-  font-size: 5rem;
+  font-size: 6rem;
 }
 .hero--textContainer__h2 {
   color: #FFF;
   font-weight: 300;
 }
 
+.index--main {
+  display: flex;
+}
+.index--main .news {
+  width: 30%;
+}
+
 .header {
   padding: 0.5rem;
   height: 10vh;
+  width: 100%;
   background-color: #000;
   color: #FFF;
   display: flex;
@@ -60,6 +69,14 @@
   font-size: 1.2rem;
   font-weight: 500;
 }
+.header nav ul li a i {
+  margin-right: 5%;
+}
+.header nav ul li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 1.2rem;
+  transition: 200ms;
+}
 .header--form {
   display: flex;
   width: 30%;
@@ -67,9 +84,9 @@
 .header--searchBar {
   height: 1.8rem;
   width: 80%;
-  border-radius: 1.2rem;
-  padding-left: 0.8rem;
+  padding-left: 0.5rem;
   font-size: 1.1rem;
+  box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(255, 255, 255, 0.7);
 }
 .header--searchButton {
   height: 1.9rem;
@@ -83,15 +100,53 @@
   margin-left: 1rem;
   padding-bottom: 0.5%;
 }
+.header--searchButton:hover {
+  box-shadow: inset -0.1rem -0.1rem 0.1rem 0.1rem rgba(255, 255, 255, 0.7);
+  width: 19%;
+  transition: 0.2s;
+}
 .header--title {
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
   width: 20%;
   text-align: left;
 }
 .header--title a {
   font-family: "Ms Madi", cursive;
   font-size: 3rem;
+}
+
+.footer {
+  background-color: #000;
+  color: #FFF;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.footer--social {
+  text-align: center;
+}
+.footer--info {
+  margin: 0;
+  font-size: 1.5rem;
+  width: 40%;
+  text-align: center;
+}
+.footer--info__h2 {
+  font-family: "Ms Madi", cursive;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.footer--info p {
+  font-size: 1rem;
+}
+.footer--contact {
+  text-align: center;
+}
+
+.footer--icon {
+  color: #FFF;
 }
 
 /*# sourceMappingURL=style.css.map */

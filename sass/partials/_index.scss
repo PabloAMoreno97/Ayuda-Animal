@@ -1,13 +1,5 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-}
-
 .hero{
-    background: url('https://i.picsum.photos/id/55/4608/3072.jpg?hmac=ahGhylwdN52ULB37deeMZX6T_G7NiERtoPhwydMvUKQ') no-repeat center / cover;
+    background: url('https://i.picsum.photos/id/1012/3973/2639.jpg?hmac=s2eybz51lnKy2ZHkE2wsgc6S81fVD1W2NKYOSh8bzDc') no-repeat center / cover;
     width: 100%;
     height: 90vh;
     display: flex;
@@ -16,16 +8,23 @@
     text-align: left;
     &--textContainer{
         padding-left: 3%;
+        padding-bottom: 1rem;
         background-color: rgba(0,0,0,0.4);
         &__h1{
             color: #FFF;
             font-family: 'Ms Madi', cursive;
-            font-size: 5rem;
+            font-size: 6rem;
         }
         &__h2{
             color: #FFF;
             font-weight: 300;
         }
+    }
+}
+.index--main{
+    display:flex;
+    .news{
+        width: 30%;
     }
 }
 
