@@ -36,60 +36,58 @@
   </section>
   <main class="index--main">
     <section class="news">
-      <div>
+      <div class="news--container">
         <h2>Noticias y curiosidades</h2>
-        <article class="firstNews__article">
+        <article class="news--article">
           <a href="https://www.purina-latam.com/mx/purina/nota/gatos/13-datos-curiosos-sobre-los-gatos#:~:text=Ya%20que%20tienes%20una%20breve%20presentaci%C3%B3n%20de%20los,Los%20gatos%20pueden%20pasar%20hasta%2014%20horas%20dormidos.">
-            <h4 class="firstNews__h4">Curiosidades sobre los gatos</h4>
-            <div class="firstNewsImg__div">
-              <img src="https://www.purina-latam.com/sites/g/files/auxxlc391/files/styles/kraken_generic_max_width_960/public/purina-10-datos-curiosos-sobre-los-gatos.png?itok=M2MiS7Mw" alt="Gato gris abrigado mirando de frente" class="firstNews__img">
+            <h4 class="news--article__title">Curiosidades sobre los gatos</h4>
+            <div class="news--article__imageContainer">
+              <img src="https://www.purina-latam.com/sites/g/files/auxxlc391/files/styles/kraken_generic_max_width_960/public/purina-10-datos-curiosos-sobre-los-gatos.png?itok=M2MiS7Mw" alt="Gato gris abrigado mirando de frente" class="news--article__img">
             </div>
-            <div class="firstNews__p">
+            <div class="news--article__text">
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex doloremque eos a, temporibus delectus rerum placeat mollitia sint aliquam totam, eveniet modi eum excepturi aliquid voluptatum reprehenderit ducimus! Quam, cum.</p>
             </div>
           </a>
         </article>
-        <article class="secondNews__article">
-          <h4 class="secondNews__h4">¿Por qué adoptar un perro?</h4>
-          <iframe src="https://www.youtube.com/embed/wWw0iQF5Za8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        <article class="news--container__article">
+          <h4 class="news--article__title">¿Por qué adoptar un perro?</h4>
+          <iframe src="https://www.youtube.com/embed/wWw0iQF5Za8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="news--article__video"></iframe>
         </article>
-        <article class="thirdNews__article">
+        <article class="news--container__article">
           <a href="https://cnnespanol.cnn.com/2021/11/06/dormir-mascota-saludable-expertos-trax/">
-            <h4 class="thirdNews__h4">¿Duermes con tu mascota?</h4>
-            <div class="thirdNewsImg__div">
-              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2021/11/dormir-con-tu-mascota.jpeg?resize=1024,576" alt="" class="thirdNews__img">
+            <h4 class="news--article__title">¿Duermes con tu mascota?</h4>
+            <div class="news--article__imageContainer">
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2021/11/dormir-con-tu-mascota.jpeg?resize=1024,576" alt="" class="news--article__img">
             </div>
-            <div class="thirdNews__p">
-              <p>En la búsqueda de un mejor sueño, las personas a menudo preguntan si deberían compartir su cama con unamascota. Antes de llegar a eso, tomemos un momento para reflexionar sobre el otro lado...</p>
+            <div class="news--article__text">
+              <p>En la búsqueda de un mejor sueño, las personas a menudo preguntan si deberían compartir su cama con una mascota. Antes de llegar a eso, tomemos un momento para reflexionar sobre el otro lado...</p>
             </div>
           </a>
         </article>
       </div>
     </section>
     <section class="newPets">
-      <div class="newPets__div">
-        <div class="newPetsTitle__div">
-          <h2>¡Nuevos integrantes!</h2>
-        </div>
-        <div class="firstNewPet__div">
+      <div class="newPets--container">
+        <h2>¡Nuevos integrantes!</h2>
+        <div class="newPets--div">
           <a href="#">
             <div class="firstNewPetImg__div"><img src="./media/tomy.jpg" alt="" class="firstNewPet__img"></div>
             <p>Tomy, 5 meses</p>
           </a>
         </div>
-        <div class="secondNewPet__div">
+        <div class="newPets--div">
           <a href="#">
             <div class="secondNewPetImg__div"><img src="./media/rocky.jpg" alt="" class="secondNewPet__img"></div>
             <p>Rocky, 2 años</p>
           </a>
         </div>
-        <div class="thirdNewPet__div">
+        <div class="newPets--div">
           <a href="#">
             <div class="thirdNewPetImg__div"><img src="./media/lucy.jpg" alt="" class="thirdNewPet__img"></div>
             <p>Lucy, 5 años</p>
           </a>
         </div>
-        <div class="fourthNewPet__div">
+        <div class="newPets--div">
           <a href="#">
             <div class="fourthNewPetImg__div"><img src="./media/toby.jpg" alt="" class="fourthNewPet__img"></div>
             <p>Toby, 1 año</p>
@@ -98,8 +96,8 @@
       </div>
     </section>
     <section class="forms">
-      <div class="fastSearch__div">
-        <form class="fastSearch__form">
+      <div class="forms--container">
+        <form class="forms--fastSearch">
           <fieldset>
             <legend>Búsqueda rápida</legend>
             <div class="petType__div">
@@ -134,15 +132,15 @@
           </fieldset>
         </form>
       </div>
-      <div class="adoptionForm__div">
-        <form class="adoptionForm__form">
+      <div class="forms--container">
+        <form class="forms--adoption">
           <fieldset>
             <legend>Formulario de adopción</legend>
-            <div class="terms__div">
+            <div class="forms--terms">
               <label for="dataCheckbox">He leído los términos</label>
-              <input type="checkbox" name="dataCheckbox" id="adoptionTerms" class="termsCheckbox__input" required="">
+              <input type="checkbox" name="dataCheckbox" id="adoptionTerms" class="termsCheckbox__input" required>
             </div>
-            <input type="submit" value="Descargar" class="adoptionFormDownload__input">
+            <input type="submit" value="Descargar" class="forms--downloadBtn">
           </fieldset>
         </form>
       </div>
