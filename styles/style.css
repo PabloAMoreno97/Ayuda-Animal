@@ -86,6 +86,9 @@
 .index--main .newPets {
   width: 50%;
 }
+.index--main .newPets .newPets--container {
+  text-align: center;
+}
 .index--main .forms {
   width: 20%;
 }
