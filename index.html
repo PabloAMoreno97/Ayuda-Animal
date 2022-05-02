@@ -99,9 +99,9 @@
       <div class="forms--container">
         <form class="forms--fastSearch">
           <fieldset>
-            <legend>Búsqueda rápida</legend>
-            <div class="petType__div">
-              <select name="dataPetType" id="petType" class="petType__select">
+            <h3>Búsqueda rápida</h3>
+            <div class="forms--list">
+              <select name="dataPetType" id="petType" class="forms--list__select">
                 <option value="type" selected="" disabled="">Tipo</option>
                 <option value="all">Todos</option>
                 <option value="cat">Gato</option>
@@ -109,8 +109,8 @@
                 <option value="other">Otro</option>
               </select>
             </div>
-            <div class="petSize__div">
-              <select name="dataPetSize" id="petSize" class="petSize__select">
+            <div class="forms--list">
+              <select name="dataPetSize" id="petSize" class="forms--list__select">
                 <option value="size" selected="" disabled="">Tamaño</option>
                 <option value="all">Todos</option>
                 <option value="small">Pequeño</option>
@@ -118,8 +118,8 @@
                 <option value="large">Grande</option>
               </select>
             </div>
-            <div class="petAge__div">
-              <select name="dataPetAge" id="petAge" class="petAge__select">
+            <div class="forms--list">
+              <select name="dataPetAge" id="petAge" class="forms--list__select">
                 <option value="age" selected="" disabled="">Edad</option>
                 <option value="any">Cualquiera</option>
                 <option value="1">Menor a 1 año</option>
@@ -128,14 +128,14 @@
                 <option value="other">Mayor a 8 años</option>
               </select>
             </div>
-            <input type="submit" value="Buscar" class="fastSearchButton__input">
+            <input type="submit" value="Buscar" class="forms--button">
           </fieldset>
         </form>
       </div>
       <div class="forms--container">
         <form class="forms--adoption">
           <fieldset>
-            <legend>Formulario de adopción</legend>
+            <h3>Formulario de adopción</h3>
             <div class="forms--terms">
               <label for="dataCheckbox">He leído los términos</label>
               <input type="checkbox" name="dataCheckbox" id="adoptionTerms" class="termsCheckbox__input" required>
