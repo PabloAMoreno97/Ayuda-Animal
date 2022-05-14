@@ -1,15 +1,15 @@
 class Pet {
-    constructor(petName, petSize, petWeight, petAge, petDangerousToHumans, petDangerousToPets, petSick, petInSpecialTreatment){
+    constructor(petName, petSize, petWeight, petAge, petDangerousToHumans, petDangerousToPets, petSicked, petInSpecialTreatment){
     this.petName = petName.slice(0,1).toUpperCase() + petName.slice(1).toLowerCase();
     this.petSize = petSize.toLowerCase();
     this.petWeight = petWeight.toLowerCase();
     this.petAge = petAge;
     this.petDangerousToHumans = petDangerousToHumans.toLowerCase();
     this.petDangerousToPets = petDangerousToPets.toLowerCase();
-    this.petSick = petSick.toLowerCase();
+    this.petSicked = petSicked.toLowerCase();
     this.petInSpecialTreatment = petInSpecialTreatment.toLowerCase();
-    this.petRoom = "Sin asignar";
     }
+    petRoom = 0;
 }
 
 class PetsRoom {
@@ -26,16 +26,16 @@ class PetsRoom {
             pet.petRoom = this.roomNumber;
             return `Se a agregado a ${pet.petName} a la habitación ${this.roomNumber}.`
         } else {
-            return 'No se pueden agregar más mascotas en esta habitación' 
+            return `No se pueden agregar más mascotas en la habitación ${this.roomNumber}` 
         }
     }
     removePet(pet){
         if (this.pets.indexOf(pet.petName) > -1){
-            this.pets.splice(this.pets.indexOf(pet.petName),1)
-            pet.peetRoom = "Sin Asignar"
-            return `Se a removido a ${pet.petName} de la celda`
+            this.pets.splice(this.pets.indexOf(pet.petName),1);
+            pet.petRoom = 0;
+            return `Se a removido a ${pet.petName} de la habitación ${this.roomNumber}`
         } else {
-            return `El perro ${pet.petName} no se encuentra en la celda`
+            return `${pet.petName} no se encuentra en la habitación ${this.roomNumber}`
         }
     }
 }
