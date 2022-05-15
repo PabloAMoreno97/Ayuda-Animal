@@ -1,0 +1,27 @@
+.tools{
+    .lists{
+        display: flex;
+        justify-content: space-around;
+        &__container{
+            margin-bottom: 0.5rem;
+            .lists__pets{
+                li{
+                    list-style: none;
+                    margin-top: 0.5rem;
+                }
+                &--title{
+                    font-weight: 600;
+                }
+            }
+            .lists__rooms{
+                li{
+                    list-style: none;
+                    margin-top: 0.5rem;
+                }
+                &--title{
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

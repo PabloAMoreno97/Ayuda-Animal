@@ -44,4 +44,25 @@ let dogsRooms = [new PetsRoom(3,1), new PetsRoom(3,2), new PetsRoom(2,3), new Pe
 
 let dogsInShelter = [new Pet('lola', 'pequeño', 'sobrepeso', 2, 'no', 'no', 'si', 'no'), new Pet('paco', 'grande', 'extremadamente delgado', 5, 'no', 'no', 'no', 'si'), new Pet('simon', 'gigante', 'ideal', 2, 'si', 'no', 'no', 'no'), new Pet('pico', 'mini', 'delgado', 2, 'no', 'no', 'no', 'si'), new Pet('tomas', 'mediano', 'extremadamente obeso', 2, 'no', 'si', 'no', 'no'), new Pet('lucas', 'grande', 'ideal', 2, 'no', 'no', 'no', 'no'), new Pet('sofia', 'pequeño', 'delgado', 2, 'no', 'no', 'si', 'no')]
 
+dogsRooms[0].addPet(dogsInShelter[0]);
+dogsRooms[2].addPet(dogsInShelter[1]);
+dogsRooms[2].addPet(dogsInShelter[2]);
+dogsRooms[3].addPet(dogsInShelter[3]);
+dogsRooms[3].addPet(dogsInShelter[4]);
+
+
+
 let dogsInShelterList = document.querySelector(`.lists__pets`)
+let dogsRoomsList = document.querySelector(`.lists__rooms`)
+
+for (let i = 0; i < dogsInShelter.length; ++i){
+    dogsInShelterList.innerHTML += `<li>${dogsInShelter[i].petName}</li>`
+}
+
+for (let i = 0; i < dogsRooms.length; ++i){
+    let petsInRoom = ""
+    for(let j = 0; j < dogsRooms[i].petsInside; ++j){
+        petsInRoom += `${dogsRooms[i].pets[j]} - `
+    }
+    dogsRoomsList.innerHTML += `<li>${dogsRooms[i].roomNumber}: ${petsInRoom}</li>`
+}

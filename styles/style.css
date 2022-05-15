@@ -274,4 +274,26 @@
   color: #FFF;
 }
 
+.tools .lists {
+  display: flex;
+  justify-content: space-around;
+}
+.tools .lists__container {
+  margin-bottom: 0.5rem;
+}
+.tools .lists__container .lists__pets li {
+  list-style: none;
+  margin-top: 0.5rem;
+}
+.tools .lists__container .lists__pets--title {
+  font-weight: 600;
+}
+.tools .lists__container .lists__rooms li {
+  list-style: none;
+  margin-top: 0.5rem;
+}
+.tools .lists__container .lists__rooms--title {
+  font-weight: 600;
+}
+
 /*# sourceMappingURL=style.css.map */
