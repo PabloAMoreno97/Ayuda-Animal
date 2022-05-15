@@ -42,15 +42,13 @@ class PetsRoom {
 
 let dogsRooms = [new PetsRoom(3,1), new PetsRoom(3,2), new PetsRoom(2,3), new PetsRoom(5,4), new PetsRoom(3,5), new PetsRoom(2,6), new PetsRoom(2,7), new PetsRoom(1,8), new PetsRoom(1,9), new PetsRoom(1,10),]
 
-let dogsInShelter = [new Pet('lola', 'pequeño', 'sobrepeso', 2, 'no', 'no', 'si', 'no'), new Pet('paco', 'grande', 'extremadamente delgado', 5, 'no', 'no', 'no', 'si'), new Pet('simon', 'gigante', 'ideal', 2, 'si', 'no', 'no', 'no'), new Pet('pico', 'mini', 'delgado', 2, 'no', 'no', 'no', 'si'), new Pet('tomas', 'mediano', 'extremadamente obeso', 2, 'no', 'si', 'no', 'no'), new Pet('lucas', 'grande', 'ideal', 2, 'no', 'no', 'no', 'no'), new Pet('sofia', 'pequeño', 'delgado', 2, 'no', 'no', 'si', 'no')]
+let dogsInShelter = [new Pet('lola', 'pequeño', 'sobrepeso', 2, 'no', 'no', 'si', 'no'), new Pet('paco', 'grande', 'desnutrido', 5, 'no', 'no', 'no', 'si'), new Pet('simon', 'gigante', 'ideal', 2, 'si', 'no', 'no', 'no'), new Pet('pico', 'mini', 'delgado', 2, 'no', 'no', 'no', 'si'), new Pet('tomas', 'mediano', 'obeso', 2, 'no', 'si', 'no', 'no'), new Pet('lucas', 'grande', 'ideal', 2, 'no', 'no', 'no', 'no'), new Pet('sofia', 'pequeño', 'delgado', 2, 'no', 'no', 'si', 'no')]
 
 dogsRooms[0].addPet(dogsInShelter[0]);
 dogsRooms[2].addPet(dogsInShelter[1]);
 dogsRooms[2].addPet(dogsInShelter[2]);
 dogsRooms[3].addPet(dogsInShelter[3]);
 dogsRooms[3].addPet(dogsInShelter[4]);
-
-
 
 let dogsInShelterList = document.querySelector(`.lists__pets`)
 let dogsRoomsList = document.querySelector(`.lists__rooms`)

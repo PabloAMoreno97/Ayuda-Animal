@@ -32,7 +32,55 @@
   <main class="tools">
     <section class="income">
       <form class="income__form">
-
+        <label for="income__petName">Nombre de la mascota:</label>
+        <input type="text" name="petName" id="income__petName">
+        <select name="income__petSize" id="forms__size">
+          <option value="" selected disabled>Tamaño</option>
+          <option value="xs">Mini</option>
+          <option value="s">Pequeño</option>
+          <option value="m">Mediano</option>
+          <option value="l">grande</option>
+          <option value="xl">gigante</option>
+        </select>
+        <select name="income__petWeight" id="forms__weight">
+          <option value="" selected disabled>Peso</option>
+          <option value="veryThin">Desnutrido</option>
+          <option value="underWeight">Delgado</option>
+          <option value="ideal">Ideal</option>
+          <option value="overWeight">Sobrepeso</option>
+          <option value="obese">Obeso</option>
+        </select>
+        <label for="income__petAge">Edad de la mascota:</label>
+        <input type="number" name="Edad" id="income__petAge">
+        <div class="income__petDangerousForHumans">
+          <h5>¿Es peligroso para los humanos?</h4>
+          <label for="isDangerousForHumans">Sí</label>
+          <input type="radio" name="dangerousForHumans" id="isDangerousForHumans">
+          <label for="isNotDangerousForHumans">No</label>
+          <input type="radio" name="dangerousForHumans" id="isNotDangerousForHumans" checked="checked">
+        </div>
+        <div class="income__petDangerousForOtherPets">
+          <h5>¿Es peligroso para las demás mascotas?</h4>
+          <label for="isDangerousForOtherPets">Sí</label>
+          <input type="radio" name="dangerousForOtherPets" id="isDangerousForOtherPets">
+          <label for="isNotDangerousForOtherPets">No</label>
+          <input type="radio" name="dangerousForOtherPets" id="isNotDangerousForOtherPets" checked="checked">
+        </div>
+        <div class="income__petSick">
+          <h5>¿Se encuentra enferma la mascota?</h4>
+          <label for="isSick">Sí</label>
+          <input type="radio" name="petSick" id="isSick">
+          <label for="isNotSick">No</label>
+          <input type="radio" name="petSick" id="isNotSick" checked="checked">
+        </div>
+        <div class="income__specialTreatment">
+          <h5>¿La mascota necesita un tratamiento especial?</h4>
+          <label for="needAnSpecialTreatment>">Sí</label>
+          <input type="radio" name="specialTreatment" id="needAnSpecialTreatment">
+          <label for="noSpecialTreatment">No</label>
+          <input type="radio" name="specialTreatment" id="noSpecialTreatment" checked="checked">
+        </div>
+        <button>Cargar Nueva Mascota</button>
       </form>
     </section>
     <section class="lists">
@@ -46,6 +94,9 @@
           <li class="lists__rooms--title">Mascotas por cuarto.</li>
         </ul>
       </div>
+    </section>
+    <section class="animatedRooms">
+      <div class="animatedRooms__container"></div>
     </section>
   </main>
   <footer class="footer">

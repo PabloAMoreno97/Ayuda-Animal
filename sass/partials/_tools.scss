@@ -1,9 +1,25 @@
 .tools{
+    display: flex;
+    justify-content: space-around;
+    .income{
+        width: 20rem;
+        height: 22rem;
+        display: flex;
+        justify-content: center;
+        &__form{
+            display:flex;
+            flex-direction: column;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            justify-content: space-around;
+        }
+    }
     .lists{
         display: flex;
         justify-content: space-around;
         &__container{
             margin-bottom: 0.5rem;
+            margin-left: 5rem;
             .lists__pets{
                 li{
                     list-style: none;
