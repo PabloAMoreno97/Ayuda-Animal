@@ -32,7 +32,7 @@
   <main class="tools">
     <section class="income">
       <form class="income__form">
-        <label for="income__petName">Nombre de la mascota:</label>
+        <label for="income__petName">Nombre de la mascota a ingresar:</label>
         <input type="text" name="petName" id="income__petName">
         <select name="income__petSize" id="forms__size">
           <option value="" selected disabled>Tamaño</option>
@@ -80,23 +80,17 @@
           <label for="noSpecialTreatment">No</label>
           <input type="radio" name="specialTreatment" id="noSpecialTreatment" checked="checked">
         </div>
-        <button>Cargar Nueva Mascota</button>
+        <input type="submit" value="Cargar">
       </form>
-    </section>
-    <section class="lists">
-      <div class="lists__container">
-        <ul class="lists__pets">
-          <li class="lists__pets--title">Mascotas en el refugio.</li>
-        </ul>
-      </div>
-      <div class="lists__container">
-        <ul class="lists__rooms">
-          <li class="lists__rooms--title">Mascotas por cuarto.</li>
-        </ul>
-      </div>
     </section>
     <section class="animatedRooms">
       <div class="animatedRooms__container"></div>
+    </section>
+    <section class="lists">
+      <div class="lists__container">
+        <h3 class="lists__pets--title">Mascotas en el refugio.</h3>
+        <ul class="lists__pets"></ul>
+      </div>
     </section>
   </main>
   <footer class="footer">

@@ -276,13 +276,16 @@
 
 .tools {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
+  align-items: center;
 }
 .tools .income {
   width: 20rem;
   height: 22rem;
+  margin-bottom: 0.5rem;
   display: flex;
-  justify-content: center;
+  text-align: center;
 }
 .tools .income__form {
   display: flex;
@@ -291,27 +294,25 @@
   margin-bottom: 0.5rem;
   justify-content: space-around;
 }
-.tools .lists {
-  display: flex;
-  justify-content: space-around;
-}
 .tools .lists__container {
+  text-align: center;
   margin-bottom: 0.5rem;
-  margin-left: 5rem;
 }
-.tools .lists__container .lists__pets li {
+.tools .lists__container li {
   list-style: none;
   margin-top: 0.5rem;
 }
-.tools .lists__container .lists__pets--title {
-  font-weight: 600;
+.tools .animatedRooms__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: space-around;
+  text-align: center;
 }
-.tools .lists__container .lists__rooms li {
+.tools .animatedRooms__container .animatedRoom {
+  width: 30%;
+}
+.tools .animatedRooms__container .animatedRoom ul {
   list-style: none;
-  margin-top: 0.5rem;
-}
-.tools .lists__container .lists__rooms--title {
-  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,11 +1,14 @@
 .tools{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     .income{
         width: 20rem;
         height: 22rem;
+        margin-bottom: 0.5rem;
         display: flex;
-        justify-content: center;
+        text-align: center;
         &__form{
             display:flex;
             flex-direction: column;
@@ -15,27 +18,25 @@
         }
     }
     .lists{
-        display: flex;
-        justify-content: space-around;
         &__container{
+            text-align: center;
             margin-bottom: 0.5rem;
-            margin-left: 5rem;
-            .lists__pets{
-                li{
-                    list-style: none;
-                    margin-top: 0.5rem;
-                }
-                &--title{
-                    font-weight: 600;
-                }
+            li{
+                list-style: none;
+                margin-top: 0.5rem;
             }
-            .lists__rooms{
-                li{
+        }
+    }
+    .animatedRooms{
+        &__container{
+            display: flex;
+            flex-wrap:wrap;
+            justify-items: space-around;
+            text-align: center;
+            .animatedRoom{
+                width: 30%;
+                ul{
                     list-style: none;
-                    margin-top: 0.5rem;
-                }
-                &--title{
-                    font-weight: 600;
                 }
             }
         }

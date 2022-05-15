@@ -50,17 +50,14 @@ dogsRooms[2].addPet(dogsInShelter[2]);
 dogsRooms[3].addPet(dogsInShelter[3]);
 dogsRooms[3].addPet(dogsInShelter[4]);
 
-let dogsInShelterList = document.querySelector(`.lists__pets`)
-let dogsRoomsList = document.querySelector(`.lists__rooms`)
+let listDogs = document.querySelector('.lists__pets');
 
-for (let i = 0; i < dogsInShelter.length; ++i){
-    dogsInShelterList.innerHTML += `<li>${dogsInShelter[i].petName}</li>`
+for (let i = 0; i < dogsInShelter.length; ++i){    
+    listDogs.appendChild(createDogsList(i,'li'));
 }
 
-for (let i = 0; i < dogsRooms.length; ++i){
-    let petsInRoom = ""
-    for(let j = 0; j < dogsRooms[i].petsInside; ++j){
-        petsInRoom += `${dogsRooms[i].pets[j]} - `
-    }
-    dogsRoomsList.innerHTML += `<li>${dogsRooms[i].roomNumber}: ${petsInRoom}</li>`
+function createDogsList(i,container){
+    let dog = document.createElement(container);
+    dog.innerText = dogsInShelter[i].petName;
+    return dog
 }
