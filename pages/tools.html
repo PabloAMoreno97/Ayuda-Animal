@@ -33,54 +33,43 @@
     <section class="income">
       <form class="income__form">
         <label for="income__petName">Nombre de la mascota a ingresar:</label>
-        <input type="text" name="petName" id="income__petName">
-        <select name="income__petSize" id="forms__size">
+        <input type="text" name="petName" id="income__petName" required>
+        <select name="income__petSize" id="forms__size" required>
           <option value="" selected disabled>Tamaño</option>
-          <option value="xs">Mini</option>
-          <option value="s">Pequeño</option>
-          <option value="m">Mediano</option>
-          <option value="l">grande</option>
-          <option value="xl">gigante</option>
+          <option value="mini">Mini</option>
+          <option value="pequeño">Pequeño</option>
+          <option value="mediano">Mediano</option>
+          <option value="grande">grande</option>
+          <option value="gigante">gigante</option>
         </select>
-        <select name="income__petWeight" id="forms__weight">
+        <select name="income__petWeight" id="forms__weight" required>
           <option value="" selected disabled>Peso</option>
-          <option value="veryThin">Desnutrido</option>
-          <option value="underWeight">Delgado</option>
+          <option value="desnutrido">Desnutrido</option>
+          <option value="delgado">Delgado</option>
           <option value="ideal">Ideal</option>
-          <option value="overWeight">Sobrepeso</option>
-          <option value="obese">Obeso</option>
+          <option value="sobrepeso">Sobrepeso</option>
+          <option value="obeso">Obeso</option>
         </select>
         <label for="income__petAge">Edad de la mascota:</label>
-        <input type="number" name="Edad" id="income__petAge">
+        <input type="number" name="Edad" id="income__petAge" required>
         <div class="income__petDangerousForHumans">
           <h5>¿Es peligroso para los humanos?</h4>
-          <label for="isDangerousForHumans">Sí</label>
-          <input type="radio" name="dangerousForHumans" id="isDangerousForHumans">
-          <label for="isNotDangerousForHumans">No</label>
-          <input type="radio" name="dangerousForHumans" id="isNotDangerousForHumans" checked="checked">
+          <input type="checkbox" name="dangerousForHumans" id="isDangerousForHumans">
         </div>
         <div class="income__petDangerousForOtherPets">
           <h5>¿Es peligroso para las demás mascotas?</h4>
-          <label for="isDangerousForOtherPets">Sí</label>
-          <input type="radio" name="dangerousForOtherPets" id="isDangerousForOtherPets">
-          <label for="isNotDangerousForOtherPets">No</label>
-          <input type="radio" name="dangerousForOtherPets" id="isNotDangerousForOtherPets" checked="checked">
+          <input type="checkbox" name="dangerousForOtherPets" id="isDangerousForOtherPets">
         </div>
         <div class="income__petSick">
           <h5>¿Se encuentra enferma la mascota?</h4>
-          <label for="isSick">Sí</label>
-          <input type="radio" name="petSick" id="isSick">
-          <label for="isNotSick">No</label>
-          <input type="radio" name="petSick" id="isNotSick" checked="checked">
+          <input type="checkbox" name="petSick" id="isSick">
         </div>
         <div class="income__specialTreatment">
           <h5>¿La mascota necesita un tratamiento especial?</h4>
-          <label for="needAnSpecialTreatment>">Sí</label>
-          <input type="radio" name="specialTreatment" id="needAnSpecialTreatment">
-          <label for="noSpecialTreatment">No</label>
-          <input type="radio" name="specialTreatment" id="noSpecialTreatment" checked="checked">
+          <input type="checkbox" name="specialTreatment" id="needAnSpecialTreatment">
         </div>
         <input type="submit" value="Cargar">
+        <input type="reset" value="Limpiar">
       </form>
     </section>
     <section class="animatedRooms">
