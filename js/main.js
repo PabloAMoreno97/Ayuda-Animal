@@ -1,5 +1,5 @@
 class Pet {
-    constructor(petId, petName, petSize, petWeight, petAge, petDangerousToHumans, petDangerousToPets, petSicked, petInSpecialTreatment){
+    constructor(petId, petName, petSize, petWeight, petAge, petDangerousToHumans, petDangerousToPets, petSick, petInSpecialTreatment){
     this.petId = petId;
     this.petName = petName.slice(0,1).toUpperCase() + petName.slice(1).toLowerCase();
     this.petSize = petSize.toLowerCase();
@@ -7,10 +7,21 @@ class Pet {
     this.petAge = petAge;
     this.petDangerousToHumans = petDangerousToHumans.toLowerCase();
     this.petDangerousToPets = petDangerousToPets.toLowerCase();
-    this.petSicked = petSicked.toLowerCase();
+    this.petSick = petSick.toLowerCase();
     this.petInSpecialTreatment = petInSpecialTreatment.toLowerCase();
     }
     petRoom = 0;
+    details(){
+        return `<li>Nombre: ${this.petName}</li>
+        <li>Tamaño: ${this.petSize}</li>
+        <li>Peso: ${this.petWeight}</li>
+        <li>Edad en años: ${this.petAge}</li>
+        <li>Peligroso para los humanos: ${this.petDangerousToHumans}</li>
+        <li>Peligroso para las demás mascotas: ${this.petDangerousToPets}</li>
+        <li>Se encuentra enferma: ${this.petSick}</li>
+        <li>Requiere tratamiento especial: ${this.petInSpecialTreatment}</li>
+        <li>Número de habitación: ${this.petRoom}</li>`
+    }
 }
 
 class PetsRoom {
@@ -63,6 +74,13 @@ let incomeForm = document.querySelector('.income__form');
 
 incomeForm.addEventListener('submit', addPet);
 
+listDogs.childNodes.forEach((dogDetails)=>{
+    dogDetails.addEventListener('click',(dogInList)=>{
+        let dogToShow = document.querySelector(".lists__petDetails");
+        dogToShow.innerHTML = dogsInShelter.find(dogInShelter => dogInShelter.petId==dogInList.target.id.slice(-1)).details();
+    })
+})
+
 function addPet(event){
     event.preventDefault();
 
@@ -102,5 +120,7 @@ function updateHTML(dogsToShow){
 function createDogsList(i,container){
     let dog = document.createElement(container);
     dog.innerText = dogsInShelter[i].petName;
+    dog.id = 'pet' + dogsInShelter[i].petId;
+    dog.className += "dog"
     return dog
 }
