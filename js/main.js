@@ -59,7 +59,7 @@ let dogsInShelter = [new Pet(1,'lola', 'pequeño', 'sobrepeso', 2, 'no', 'no', '
 let lastPetAdded = JSON.parse(localStorage.getItem('newDogs'));
 
 dogsInShelter.push(lastPetAdded)
-
+console.log(dogsInShelter)
 dogsRooms[0].addPet(dogsInShelter[0]);
 dogsRooms[2].addPet(dogsInShelter[1]);
 dogsRooms[2].addPet(dogsInShelter[2]);
@@ -77,7 +77,7 @@ incomeForm.addEventListener('submit', addPet);
 listDogs.childNodes.forEach((dogDetails)=>{
     dogDetails.addEventListener('click',(dogInList)=>{
         let dogToShow = document.querySelector(".lists__petDetails");
-        dogToShow.innerHTML = dogsInShelter.find(dogInShelter => dogInShelter.petId==dogInList.target.id.slice(-1)).details();
+        dogToShow.innerHTML = dogsInShelter.find(dogInShelter => dogInShelter.petId==dogInList.target.id).details();
     })
 })
 
@@ -86,23 +86,18 @@ function addPet(event){
 
     let incomeForm = document.querySelector('.income__form');
     let newId = dogsInShelter[dogsInShelter.length-1].petId + 1;
-    let isDangerousForHumans = 'no';
-    let isDangerousForOtherPets = 'no';
-    let isSick = 'no';
     let needSpecialTreatment = 'no';
+    let isSick = 'no';
 
-    if (incomeForm[4].checked){
-        isDangerousForHumans = 'si'
-    }
-    if (incomeForm[5].checked){
-        isDangerousForOtherPets = 'si'
-    }
-    if (incomeForm[6].checked){
-        isSick = 'si'
-    }
-    if (incomeForm[7].checked){
-        needSpecialTreatment = 'si'
-    }
+    incomeForm[4].checked ? isDangerousForHumans = 'si': isDangerousForHumans ='no';
+
+    incomeForm[5].checked ? isDangerousForOtherPets = 'si': isDangerousForOtherPets = 'no';
+
+    isSick = incomeForm[6].checked && 'si';
+
+    needSpecialTreatment = incomeForm[7].checked && 'si';
+
+        
     const newDog = new Pet (newId, incomeForm[0].value, incomeForm[1].value, incomeForm[2].value, incomeForm[3].value, isDangerousForHumans, isDangerousForOtherPets, isSick, needSpecialTreatment);
     dogsInShelter.push(newDog);
     localStorage.setItem('newDogs', JSON.stringify(newDog));
@@ -120,7 +115,7 @@ function updateHTML(dogsToShow){
 function createDogsList(i,container){
     let dog = document.createElement(container);
     dog.innerText = dogsInShelter[i].petName;
-    dog.id = 'pet' + dogsInShelter[i].petId;
+    dog.id = dogsInShelter[i].petId;
     dog.className += "dog"
     return dog
 }
