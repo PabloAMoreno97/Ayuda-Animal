@@ -56,7 +56,7 @@ let dogsRooms = [new PetsRoom(3,1), new PetsRoom(3,2), new PetsRoom(2,3), new Pe
 
 let dogsInShelter = [new Pet(1,'lola', 'pequeño', 'sobrepeso', 2, 'no', 'no', 'si', 'no'), new Pet(2, 'paco', 'grande', 'desnutrido', 5, 'no', 'no', 'no', 'si'), new Pet(3, 'simon', 'gigante', 'ideal', 2, 'si', 'no', 'no', 'no'), new Pet(4, 'pico', 'mini', 'delgado', 2, 'no', 'no', 'no', 'si'), new Pet(5, 'tomas', 'mediano', 'obeso', 2, 'no', 'si', 'no', 'no'), new Pet(6, 'lucas', 'grande', 'ideal', 2, 'no', 'no', 'no', 'no'), new Pet(7, 'sofia', 'pequeño', 'delgado', 2, 'no', 'no', 'si', 'no')]
 
-let lastPetAdded = JSON.parse(localStorage.getItem('newDogs')) || [];
+let lastPetAdded = JSON.parse(localStorage.getItem('newDogs'));
 
 dogsInShelter.push(lastPetAdded)
 console.log(dogsInShelter)
@@ -114,8 +114,10 @@ function updateHTML(dogsToShow){
 
 function createDogsList(i,container){
     let dog = document.createElement(container);
-    dog.innerText = dogsInShelter[i].petName;
-    dog.id = dogsInShelter[i].petId;
+    let {petName, petId} = dogsInShelter[i] || "";
+    console.log(`${petId || ""}: ${petName || ""}`)
+    dog.innerText = dogsInShelter[i]?.petName || "";
+    dog.id = dogsInShelter[i]?.petId;
     dog.className += "dog"
     return dog
 }
