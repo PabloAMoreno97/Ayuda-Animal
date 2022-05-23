@@ -81,6 +81,12 @@ listDogs.childNodes.forEach((dogDetails)=>{
     })
 })
 
+let listDogsAges = [];
+for(let dog of dogsInShelter){
+    listDogsAges.push(parseInt(dog?.petAge||0))
+}
+let olderAgeDog = Math.max(...listDogsAges)
+
 function addPet(event){
     event.preventDefault();
 
@@ -96,7 +102,6 @@ function addPet(event){
     isSick = incomeForm[6].checked && 'si';
 
     needSpecialTreatment = incomeForm[7].checked && 'si';
-
         
     const newDog = new Pet (newId, incomeForm[0].value, incomeForm[1].value, incomeForm[2].value, incomeForm[3].value, isDangerousForHumans, isDangerousForOtherPets, isSick, needSpecialTreatment);
     dogsInShelter.push(newDog);
