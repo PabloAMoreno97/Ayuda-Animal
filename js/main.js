@@ -58,7 +58,8 @@ let dogsInShelter = [new Pet(1,'lola', 'pequeño', 'sobrepeso', 2, 'no', 'no', '
 
 let lastPetAdded = JSON.parse(localStorage.getItem('newDogs'));
 
-dogsInShelter.push(lastPetAdded)
+lastPetAdded != null ? dogsInShelter.push(lastPetAdded): n = "";
+
 console.log(dogsInShelter)
 dogsRooms[0].addPet(dogsInShelter[0]);
 dogsRooms[2].addPet(dogsInShelter[1]);
@@ -92,22 +93,24 @@ function addPet(event){
 
     let incomeForm = document.querySelector('.income__form');
     let newId = dogsInShelter[dogsInShelter.length-1].petId + 1;
-    let needSpecialTreatment = 'no';
-    let isSick = 'no';
 
     incomeForm[4].checked ? isDangerousForHumans = 'si': isDangerousForHumans ='no';
 
     incomeForm[5].checked ? isDangerousForOtherPets = 'si': isDangerousForOtherPets = 'no';
 
-    isSick = incomeForm[6].checked && 'si';
+    isSick = incomeForm[6].checked ? isSick = 'si': isSick ='no';
 
-    needSpecialTreatment = incomeForm[7].checked && 'si';
+    needSpecialTreatment = incomeForm[7].checked ? needSpecialTreatment = 'si': needSpecialTreatment = 'no';
         
     const newDog = new Pet (newId, incomeForm[0].value, incomeForm[1].value, incomeForm[2].value, incomeForm[3].value, isDangerousForHumans, isDangerousForOtherPets, isSick, needSpecialTreatment);
     dogsInShelter.push(newDog);
     localStorage.setItem('newDogs', JSON.stringify(newDog));
     listDogs.innerHTML = "";
     updateHTML(dogsInShelter);
+    Toastify({
+        text: `¡Se ha agregado a ${incomeForm[0].value} a las mascotas!`,
+        duration: 3000
+    }).showToast();
     incomeForm.reset();
 }
 
@@ -119,10 +122,8 @@ function updateHTML(dogsToShow){
 
 function createDogsList(i,container){
     let dog = document.createElement(container);
-    let {petName, petId} = dogsInShelter[i] || "";
-    console.log(`${petId || ""}: ${petName || ""}`)
-    dog.innerText = dogsInShelter[i]?.petName || "";
-    dog.id = dogsInShelter[i]?.petId;
-    dog.className += "dog"
+    dog.innerText = dogsInShelter[i].petName;
+    dog.id = dogsInShelter[i].petId;
+    dog.className += "dog";
     return dog
 }
